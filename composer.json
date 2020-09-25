@@ -1,5 +1,12 @@
 {
+    "name": "unserialize/howto-composer-library",
+    "description": "Demo: a minimal example of PHP library, that can be installed with composer",
     "require": {
         "rybakit/msgpack": "^0.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DummyNamespace\\": "src/"
+        }
     }
 }
