@@ -13,4 +13,8 @@ class DummyClass {
   static public function someDummyMethod(): void {
     // do nothing — just ensure, that this class is autoloaded
   }
+
+  public static function getLengthOfString(string $s): int {
+    return strlen($s);
+  }
 }
