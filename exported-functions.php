@@ -10,6 +10,15 @@ function packInteger(int $value): ?string {
   return $packer->pack($value);
 }
 
+function packIntegerDebug(int $value): array {
+  $packed = packInteger($value);
+  return [
+    'value'  => $value,
+    'packed' => $packed,
+    'length' => \DummyNamespace\DummyClass::getLengthOfString($packed),
+  ];
+}
+
 function unpackInteger(string $packed): ?int {
   $unpacker = new MessagePack\BufferUnpacker();
   $unpacker->reset($packed);

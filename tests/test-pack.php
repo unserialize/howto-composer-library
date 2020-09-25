@@ -36,6 +36,15 @@ function testDummyMethod() {
   echo __FUNCTION__ . " passed\n";
 }
 
+/**
+ * Ensure packIntegerDebug() call doesn't produce any error
+ */
+function printDebug() {
+  print_r(packIntegerDebug(0));
+  echo __FUNCTION__ . " passed\n";
+}
+
 
 testThatPackUnpackEquals();
 testDummyMethod();
+printDebug();
