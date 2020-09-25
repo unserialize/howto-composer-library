@@ -1,0 +1,5 @@
+{
+    "require": {
+        "rybakit/msgpack": "^0.7.0"
+    }
+}
