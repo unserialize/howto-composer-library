@@ -20,7 +20,7 @@ It exports 2 PHP functions: *packInteger()* and *unpackInteger()*. They call *Me
     }
   ],
   "require": {
-    "unserialize/howto-composer-library": "1.1"
+    "unserialize/howto-composer-library": "^1.0.0"
   }
 }
 ```
@@ -30,7 +30,6 @@ It exports 2 PHP functions: *packInteger()* and *unpackInteger()*. They call *Me
 * Create `1.php`, add
 ```php
 require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/vendor/unserialize/howto-composer-library/exported-functions.php';
 
 echo unpackInteger(packInteger(42)), "\n";
 ``` 
@@ -49,7 +48,7 @@ Composer is also used while developing, just *vendor/* folder is in *.gitignore*
 
 When you install this lib with composer, it automatically rules all sub-dependencies and autoloads.  
 
-This lib exports **functions** (not classes), that's why you need to *require_once* a file manually.  
+This lib exports **functions**. The exported file is listed in *"files"* autoload in *composer.json*, so you don't need to call *require_once* manually.  
 You can also call *DummyClass::* methods. They are considered as internal implementation, but still.
 
-**Versioning** is done via **git tags**. This repo has *v1.0* and *v1.1* tags. 
+**Versioning** is done via **git tags**. (see Github menu for available) 
